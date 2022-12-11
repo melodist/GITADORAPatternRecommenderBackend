@@ -1,21 +1,20 @@
 package io.github.melodist.gfdmpatternreco.domain;
 
-import javax.persistence.*;
-import java.util.ArrayList;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+
 import java.util.List;
 
-@Entity
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Song {
 
-    @Id @GeneratedValue
     private Long id;
-
     private String title;
     private String artist;
-
-    @OneToMany(mappedBy = "song")
-    List<Pattern> patterns = new ArrayList<>();
-
-    @OneToOne
+    List<Pattern> patterns;
     Version version;
+
+    public static Song withId(Long id, String title, String artist, List<Pattern> patterns, Version version) {
+        return new Song(id, title, artist, patterns, version);
+    }
 }
