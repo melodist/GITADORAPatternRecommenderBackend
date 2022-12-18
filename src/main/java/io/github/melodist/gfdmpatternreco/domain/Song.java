@@ -14,7 +14,7 @@ public class Song {
     List<Pattern> patterns;
     Version version;
 
-    public static Song withId(Long id, String title, String artist, List<Pattern> patterns, Version version) {
-        return new Song(id, title, artist, patterns, version);
+    public static Song withId(Long id, String title, String artist) {
+        return new Song(id, title, artist, null, null);
     }
 }
