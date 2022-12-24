@@ -1,6 +1,5 @@
 package io.github.melodist.gfdmpatternreco.adapter.out.persistence;
 
-import io.github.melodist.gfdmpatternreco.domain.Version;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,7 +26,7 @@ public class SongJpaEntity {
     List<PatternJpaEntity> patterns = new ArrayList<>();
 
     @OneToOne
-    Version version;
+    VersionJpaEntity version;
 
     static SongJpaEntity createSongJpaEntity(String title, String artist) {
         SongJpaEntity result = new SongJpaEntity();

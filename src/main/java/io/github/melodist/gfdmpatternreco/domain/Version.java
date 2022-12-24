@@ -1,14 +1,13 @@
 package io.github.melodist.gfdmpatternreco.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 
-@Entity
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Version {
+    private final String versionName;
 
-    @Id @GeneratedValue
-    private Long id;
-
-    private String versionName;
+    public static Version createVersion(String versionName) {
+        return new Version(versionName);
+    }
 }
