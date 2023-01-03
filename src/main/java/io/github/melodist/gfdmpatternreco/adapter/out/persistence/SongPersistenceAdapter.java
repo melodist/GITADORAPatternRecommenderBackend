@@ -6,7 +6,7 @@ import io.github.melodist.gfdmpatternreco.domain.Song;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.EntityNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 
 @RequiredArgsConstructor
 @Component

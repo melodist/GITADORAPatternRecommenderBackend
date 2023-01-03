@@ -3,7 +3,7 @@ GITADORA Pattern Recommender Backend
 
 ## 사용 기술
 - Java 17
-- Spring Boot 2.7.5
+- Spring Boot 2.7.5 -> 3.0.1
 - Lombok
 - Spring Data JPA
 - H2 Database
